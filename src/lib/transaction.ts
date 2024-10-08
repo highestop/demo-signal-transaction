@@ -1,9 +1,7 @@
 import { Transaction, TransactionAction } from "../types/transaction"
 
 class TransactionImpl implements Transaction {
-    constructor(private readonly signal: AbortSignal) {
-
-    }
+    constructor(private readonly signal: AbortSignal) {}
 
     act: TransactionAction = (action) => {
         const cleanup = action()
